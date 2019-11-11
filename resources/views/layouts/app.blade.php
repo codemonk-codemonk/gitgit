@@ -114,8 +114,31 @@
 
 
                         <?php
-                      }else{
+                      }else if($curr->usertype == "subadmin")
+                        {
                         ?>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ url('/subdashboard') }}"><i class="fa fa-btn fa-sign-out"></i>Dashboard</a></li>
+                              <li><a href="{{ url('/home') }}"><i class="fa fa-btn fa-sign-out"></i>Profile</a></li>
+                              <li><a href="{{ url('/policy') }}"><i class="fa fa-btn fa-sign-out"></i>Policy</a></li>
+
+                              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                        </li>
+
+                        <?php
+}
+                        else {
+
+                         ?>
+
+
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -136,6 +159,8 @@
 
 
                          ?>
+
+
 
 
                     @endif

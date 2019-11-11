@@ -50,6 +50,33 @@ Route::get('/transfer','CarFormController@storetwo');
 
 
 
+
+
+  Route::get('/subdashboard', function () {
+      return view('subadmin.dashboard');
+  });
+
+  Route::get('/pending', function () {
+      return view('pending');
+  });
+
+  Route::get('/subrole-register','Admin\DashboardController@registered');
+
+  Route::get('/subrole-edit/{id}','Admin\DashboardController@registeredit');
+
+  Route::put('/subrole-register-update/{id}','Admin\DashboardController@registerupdate');
+
+  Route::delete('/subrole-delete/{id}','Admin\DashboardController@registerdelete');
+
+
+
+
+
+
+
+
+
+
 Route::group(['middleware' => ['auth','admin']],function(){
 
 
