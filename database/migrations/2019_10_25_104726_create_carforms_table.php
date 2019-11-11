@@ -32,6 +32,7 @@ class CreateCarformsTable extends Migration
           $table->binary('uploadback');
           $table->date('start');
           $table->date('end');
+              $table->string('status');
           $table->timestamps();
         });
     }

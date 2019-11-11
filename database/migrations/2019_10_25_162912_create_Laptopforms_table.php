@@ -35,7 +35,7 @@ class CreateLaptopformsTable extends Migration
             $table->binary('uploadserialnumber');
             $table->date('start');
             $table->date('end');
-
+    $table->string('status');
 
 
             $table->timestamps();

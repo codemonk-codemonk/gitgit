@@ -36,7 +36,7 @@ class CreateMobileformsTable extends Migration
             $table->date('start');
             $table->date('end');
 
-
+    $table->string('status');
             $table->timestamps();
         });  //
     }

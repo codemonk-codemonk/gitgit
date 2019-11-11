@@ -26,7 +26,7 @@ class CreateRegistersTable extends Migration
             $table->integer('Aadhar');
             $table->string('State');
             $table->string('Country');
-            $table->binary('uploadfile'); 
+            $table->binary('uploadfile');
 
 
             $table->timestamps();
