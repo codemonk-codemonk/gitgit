@@ -32,9 +32,10 @@ if($res = mysqli_query($link, $pre))
       mysqli_query($link, $pretwo);
   }
 }
-
-
-
+/*
+$temp="UPDATE payments set id=(SELECT COUNT(*) FROM policy)";
+mysqli_query($link, $temp);
+*/
 $sql = "INSERT INTO carforms
 SELECT * FROM payments";
 
