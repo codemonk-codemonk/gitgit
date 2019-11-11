@@ -21,8 +21,11 @@
                     <thead class=" text-primary">
                       <th>POLICY_ID</th>
                       <th>POLICY_FOR</th>
+                      <th>PRICE(On_bill)</th>
                       <th>STARTING FROM</th>
                       <th>ENDING AT</th>
+                      <th>PAID_AMOUNT</th>
+                      <th>IDV(On_claim)</th>
 
                     </thead>
                     <tbody>
@@ -45,9 +48,21 @@
                               while($row = mysqli_fetch_array($result)){
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
+
                                       echo "<td>" . "CAR" . "</td>";
+                                        echo "<td>" . $row['price'] . "</td>";
                                       echo "<td>" . $row['start'] . "</td>";
                                       echo "<td>" . $row['end'] . "</td>";
+                                      echo "<td>" . $row['amounttobepaid'] . "</td>";
+                                      echo "<td>" . $row['amountidv'] . "</td>";
+                          /*
+                        ?>
+                          <td>
+                            <a href="" class="btn btn-success">Detail</a>
+                         </td>
+
+                        <?php
+                        */
                                   echo "</tr>";
 
                               }
@@ -65,8 +80,20 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "BIKE" . "</td>";
+                                      echo "<td>" . $row['price'] . "</td>";
                                       echo "<td>" . $row['start'] . "</td>";
                                       echo "<td>" . $row['end'] . "</td>";
+                                      echo "<td>" . $row['amounttobepaid'] . "</td>";
+                                      echo "<td>" . $row['amountidv'] . "</td>";
+                                      /*
+                                      ?>
+                                        <td>
+                                          <a href="" class="btn btn-success">Detail</a>
+                                       </td>
+
+                                      <?php
+                                      */
+
                                   echo "</tr>";
 
                               }
@@ -84,8 +111,20 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "MOBILE" . "</td>";
+                                      echo "<td>" . $row['price'] . "</td>";
                                       echo "<td>" . $row['start'] . "</td>";
                                       echo "<td>" . $row['end'] . "</td>";
+                                      echo "<td>" . $row['amounttobepaid'] . "</td>";
+                                      echo "<td>" . $row['amountidv'] . "</td>";
+                                      /*
+                                      ?>
+                                        <td>
+                                          <a href="" class="btn btn-success">Detail</a>
+                                       </td>
+
+                                      <?php
+                                      */
+
                                   echo "</tr>";
 
                               }
@@ -103,8 +142,20 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "LAPTOP" . "</td>";
+                                      echo "<td>" . $row['price'] . "</td>";
                                       echo "<td>" . $row['start'] . "</td>";
                                       echo "<td>" . $row['end'] . "</td>";
+                                      echo "<td>" . $row['amounttobepaid'] . "</td>";
+                                      echo "<td>" . $row['amountidv'] . "</td>";
+                                      /*
+                                      ?>
+                                        <td>
+                                          <a href="" class="btn btn-success">Detail</a>
+                                       </td>
+
+                                      <?php
+                                      */
+
                                   echo "</tr>";
 
                               }
