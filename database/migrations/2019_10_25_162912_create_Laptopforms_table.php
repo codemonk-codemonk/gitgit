@@ -25,7 +25,7 @@ class CreateLaptopformsTable extends Migration
             $table->string('serialnumber');
             $table->string('modelnumber');
             $table->string('productnumber');
-            $table->date('purchasingdate');
+            $table->string('purchasingdate');
             $table->integer('price');
             $table->integer('amounttobepaid');
             $table->integer('amountidv');
@@ -33,6 +33,8 @@ class CreateLaptopformsTable extends Migration
             $table->binary('uploadfront');
             $table->binary('uploadback');
             $table->binary('uploadserialnumber');
+            $table->date('start');
+            $table->date('end');
 
 
 

@@ -25,7 +25,7 @@ class CreateMobileformsTable extends Migration
             $table->string('mobilebrand');
             $table->string('imeinumber');
             $table->string('modelnumber');
-            $table->date('purchasingdate');
+            $table->string('purchasingdate');
             $table->string('price');
             $table->integer('amounttobepaid');
             $table->integer('amountidv');
@@ -33,7 +33,8 @@ class CreateMobileformsTable extends Migration
             $table->binary('uploadfront');
             $table->binary('uploadback');
             $table->binary('uploadimei');
-
+            $table->date('start');
+            $table->date('end');
 
 
             $table->timestamps();

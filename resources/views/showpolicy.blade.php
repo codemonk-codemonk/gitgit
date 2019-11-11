@@ -20,7 +20,9 @@
                   <table class="table">
                     <thead class=" text-primary">
                       <th>POLICY_ID</th>
-                      <th> POLICY_FOR</th>
+                      <th>POLICY_FOR</th>
+                      <th>STARTING FROM</th>
+                      <th>ENDING AT</th>
 
                     </thead>
                     <tbody>
@@ -44,6 +46,8 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "CAR" . "</td>";
+                                      echo "<td>" . $row['start'] . "</td>";
+                                      echo "<td>" . $row['end'] . "</td>";
                                   echo "</tr>";
 
                               }
@@ -61,6 +65,8 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "BIKE" . "</td>";
+                                      echo "<td>" . $row['start'] . "</td>";
+                                      echo "<td>" . $row['end'] . "</td>";
                                   echo "</tr>";
 
                               }
@@ -78,6 +84,8 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "MOBILE" . "</td>";
+                                      echo "<td>" . $row['start'] . "</td>";
+                                      echo "<td>" . $row['end'] . "</td>";
                                   echo "</tr>";
 
                               }
@@ -95,10 +103,12 @@
                                   echo "<tr>";
                                     echo "<td>" . $row['id'] . "</td>";
                                       echo "<td>" . "LAPTOP" . "</td>";
+                                      echo "<td>" . $row['start'] . "</td>";
+                                      echo "<td>" . $row['end'] . "</td>";
                                   echo "</tr>";
 
                               }
-                            
+
                               // Free result set
                               mysqli_free_result($result);
                           }

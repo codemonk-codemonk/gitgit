@@ -19,7 +19,7 @@ class CreateBikeformsTable extends Migration
 
             $table->string('bikereg');
             $table->string('modelnumber');
-            $table->date('purchasingdate');
+            $table->string('purchasingdate');
             $table->integer('price');
             $table->integer('amounttobepaid');
             $table->integer('amountidv');
@@ -27,6 +27,8 @@ class CreateBikeformsTable extends Migration
             $table->binary('uploadbikephoto');
             $table->binary('uploadfront');
             $table->binary('uploadback');
+            $table->date('start');
+            $table->date('end');
             $table->timestamps();
         });
     }

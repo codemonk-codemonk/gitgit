@@ -68,6 +68,19 @@ class MobileController extends Controller
         $curr  = auth()->user();
 
 
+        $s= date("Y-m-d", strtotime('tomorrow'));
+            $e = date("Y-m-d", strtotime("+12 Months"));
+
+
+         if ($request->policyplan == "Two") {
+                  $e = date("Y-m-d", strtotime("+24 Months"));
+          } elseif ($request->policyplan == "Three") {
+                  $e = date("Y-m-d", strtotime("+36 Months"));
+              }
+
+
+
+
       $reg=new Mobileform;
 
         $reg->aadharno=$curr->aadharno;
@@ -82,6 +95,9 @@ class MobileController extends Controller
         $reg->uploadfront = $request->uploadfront;
         $reg->uploadback = $request->uploadback;
         $reg->uploadimei = $request->uploadimei;
+        $reg->start = $s;
+        $reg->end =  $e;
+
 
        $reg->save();
 

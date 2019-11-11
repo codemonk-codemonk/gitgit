@@ -83,6 +83,7 @@ class PaymentController extends Controller
               $e = date("Y-m-d", strtotime("+36 Months"));
           }
 
+        
 
       $reg=new Payment;
 
